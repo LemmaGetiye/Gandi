@@ -1,0 +1,759 @@
+<html lang="en" class="transition-colors duration-1000">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>JOE</title>
+        <link rel="icon" href="./../public/globe.png" type="image/png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./extra.css" />
+        <link rel="stylesheet" href="./output.css" />
+    </head>
+    <body class="bg-teal-50 font-['Roboto']">
+        <section class="flex min-h-screen flex-col dark:bg-slate-800">
+            <nav
+                class="sticky-nav sticky top-0 z-50 flex items-center justify-between border border-b-gray-300 bg-white px-4 py-4 dark:border-b-slate-700 dark:bg-slate-800 dark:text-white md:px-6 md:py-4 lg:justify-around lg:px-8 lg:py-6"
+            >
+                <!-- ** hamburger Menu-->
+                <div class="hamburger cursor-pointer md:hidden">
+                    <span
+                        class="bar mx-auto my-[7px] block h-[4px] w-[40px] bg-black dark:bg-white"
+                    ></span>
+                    <span
+                        class="bar mx-auto my-[7px] block h-[4px] w-[40px] bg-black dark:bg-white"
+                    ></span>
+                    <span
+                        class="bar mx-auto block h-[4px] w-[40px] bg-black dark:bg-white"
+                    ></span>
+                </div>
+
+                <div
+                    class="cursor-pointer text-3xl font-bold text-blue-700 dark:text-white md:text-4xl"
+                >
+                    <a href="#home">JOE</a>
+                </div>
+                <ul
+                    class="bar-menu fixed -left-[100%] top-[70px] flex w-full flex-col gap-0 bg-white text-center text-lg dark:bg-slate-800 md:hidden"
+                    id="small-nav-menu"
+                >
+                    <li
+                        class="rounded-md px-3 py-2 hover:bg-gray-200 dark:hover:bg-slate-500 md:my-0"
+                    >
+                        <a href="#home" class="block">Home</a>
+                    </li>
+                    <li
+                        class="rounded-md px-3 py-2 hover:bg-gray-100 dark:hover:bg-slate-500"
+                    >
+                        <a href="#service" class="block">Service</a>
+                    </li>
+                    <li class="rounded-md px-3 py-2 hover:bg-gray-100">
+                        <a href="#skill" class="block dark:hover:bg-slate-500"
+                            >Skills</a
+                        >
+                    </li>
+                    <li
+                        class="rounded-md px-3 py-2 hover:bg-gray-100 dark:hover:bg-slate-500"
+                    >
+                        <a href="#contact" class="block">Contact</a>
+                    </li>
+                    <li
+                        class="theme mb-2 flex cursor-pointer items-center justify-center"
+                    >
+                        <img
+                            src="./../public/dark.svg"
+                            alt=""
+                            class="theme-icon"
+                        />
+                    </li>
+                </ul>
+
+                <ul
+                    class="hidden text-lg md:flex md:items-center md:gap-2 lg:gap-7"
+                    id="nav-menu"
+                >
+                    <li
+                        class="my-[16px] rounded-md px-3 py-2 hover:bg-neutral-200 dark:hover:bg-blue-900 md:my-0"
+                    >
+                        <a href="#home" class="block">Home</a>
+                    </li>
+                    <li
+                        class="rounded-md px-3 py-2 hover:bg-gray-200 dark:hover:bg-blue-900"
+                    >
+                        <a href="#service" class="block">Service</a>
+                    </li>
+                    <li
+                        class="rounded-md px-3 py-2 hover:bg-gray-200 dark:hover:bg-blue-900"
+                    >
+                        <a href="#skill" class="block">Skills</a>
+                    </li>
+                    <li
+                        class="rounded-md px-3 py-2 hover:bg-gray-200 dark:hover:bg-blue-900"
+                    >
+                        <a href="#contact" class="block">Contact</a>
+                    </li>
+                    <li class="theme cursor-pointer">
+                        <img
+                            src="./../public/dark.svg"
+                            alt=""
+                            class="theme-icon"
+                        />
+                    </li>
+                </ul>
+            </nav>
+            <main
+                class="min-h-screen flex-1 overflow-x-hidden overflow-y-scroll dark:bg-slate-800 lg:mx-auto lg:w-3/4 lg:no-scrollbar"
+            >
+                <hero
+                    class="flex h-screen flex-col items-center px-4 pt-7 md:my-auto md:items-center md:justify-center"
+                    id="home"
+                >
+                    <div
+                        class="flex flex-col items-center gap-5 md:flex-row md:gap-7"
+                    >
+                        <div
+                            id="hero-img-c"
+                            class="flex h-[350px] w-[350px] items-center justify-center overflow-hidden rounded-full bg-green-600 md:min-h-[250px] md:min-w-[250px]"
+                        ></div>
+
+                        <div
+                            class="flex flex-col items-center justify-center md:block"
+                            id="dev"
+                        >
+                            <p
+                                class="text-4xl font-extrabold text-gray-800 dark:text-white md:text-6xl"
+                            >
+                                Joe Alex.
+                            </p>
+                            <p
+                                class="text-xl font-medium dark:text-white md:text-2xl"
+                            >
+                                Web designer and developer
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center" id="hero-stuff">
+                        <p
+                            class="p-6 text-lg leading-7 text-gray-700 dark:text-white md:w-[90%] md:text-xl md:leading-8 lg:w-[90%]"
+                        >
+                            Hi, I'm a passionate web designer and developer. I
+                            create stunning, responsive websites that bring
+                            ideas to life with sleek design and clean code.
+                            Let’s build something amazing together!
+                        </p>
+
+                        <div
+                            class="mb-10 flex items-center justify-between gap-10 md:mb-14"
+                        >
+                            <div
+                                class="flex flex-col items-center gap-0 md:gap-1"
+                            >
+                                <p
+                                    class="dark:text-white md:text-[19px] md:font-medium md:text-gray-800"
+                                >
+                                    Call me
+                                </p>
+
+                                <div class="flex items-center gap-1 md:gap-3">
+                                    <img
+                                        src="./../public/phone.svg"
+                                        class=""
+                                        alt=""
+                                        id="phone-icon"
+                                    />
+
+                                    <p
+                                        class="font-semibold text-gray-800 dark:text-white md:text-xl"
+                                    >
+                                        +251925752767
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex flex-col items-center gap-0 md:gap-1"
+                            >
+                                <p
+                                    class="dark:text-white md:text-[19px] md:font-medium md:text-gray-800"
+                                >
+                                    Drop your message
+                                </p>
+
+                                <div class="flex items-center gap-1 md:gap-3">
+                                    <img
+                                        src="../public/gmail-svgrepo-com.svg"
+                                        alt=""
+                                        width="30px"
+                                        height="30px"
+                                        id="email-icon"
+                                    />
+
+                                    <a
+                                        href="mailto:http://abc123@gmail.com"
+                                        class="font-semibold text-blue-600 focus:bg-blue-800 dark:text-white md:text-xl"
+                                        >abc123@gmail.com</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <button
+                            class="rounded-lg bg-blue-700 px-7 py-4 text-white shadow-md shadow-slate-200 focus:bg-blue-900 dark:bg-blue-600 dark:shadow-gray-200 md:px-11 md:py-5 md:text-xl"
+                        >
+                            <a href="#service">More about me</a>
+                        </button>
+                    </div>
+                </hero>
+
+                <section id="service" class="min-h-screen px-2 pt-1">
+                    <div class="flex h-full flex-col px-4 py-2 md:mx-9">
+                        <div class="flex flex-col items-center justify-center">
+                            <p class="hidden w-fit dark:text-white md:block">
+                                What I will do for you
+                            </p>
+                            <header
+                                class="w-fit pb-7 text-4xl font-extrabold text-gray-800 dark:text-white md:text-6xl"
+                            >
+                                Services
+                            </header>
+                        </div>
+
+                        <div
+                            class="flex flex-1 flex-col justify-around gap-8 md:flex-grow-0 md:flex-wrap md:gap-12"
+                        >
+                            <div
+                                class="card-to--glow relative flex flex-1 flex-col justify-center gap-3 rounded-xl border bg-[#bae6fd] px-4 py-8 before:opacity-50 before:blur-lg dark:bg-blue-950 dark:before:bg-conic-gradient dark:after:bg-conic-gradient md:px-6 md:py-5 lg:mx-auto lg:w-3/4"
+                            >
+                                <div
+                                    class="flex items-center justify-center gap-3 md:flex-col"
+                                >
+                                    <div
+                                        class="h-14 w-14 rounded-full bg-green-700 md:h-[90px] md:w-[90px]"
+                                    ></div>
+                                    <h1
+                                        class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl"
+                                    >
+                                        Graphics Design
+                                    </h1>
+                                </div>
+
+                                <p
+                                    class="text-lg leading-8 text-gray-700 dark:text-stone-300 md:px-7 md:text-xl md:leading-10"
+                                >
+                                    I’m passionate about turning ideas into
+                                    visually compelling stories that truly
+                                    connect with your audience. I focus on
+                                    understanding your brand, your goals, and
+                                    your vision to deliver designs that are not
+                                    only eye-catching but also deeply aligned
+                                    with your message. With attention to detail
+                                    and a commitment to high-quality work, I
+                                    ensure every project is polished and
+                                    professional. Whether you need branding, web
+                                    design, or digital illustrations, I approach
+                                    every task with creativity and precision,
+                                    always striving to exceed expectations and
+                                    bring your vision to life.
+                                </p>
+                            </div>
+
+                            <div
+                                class="card-to--glow relative flex flex-1 flex-col justify-center gap-3 rounded-xl border bg-[#bae6fd] px-4 py-8 before:opacity-50 before:blur-lg dark:bg-blue-950 dark:before:bg-conic-gradient dark:after:bg-conic-gradient md:px-6 md:py-5 lg:mx-auto lg:w-3/4"
+                            >
+                                <div
+                                    class="flex items-center justify-center gap-3 px-4 py-2 md:flex-col"
+                                >
+                                    <div
+                                        class="h-14 w-14 rounded-full bg-green-700 md:h-[90px] md:w-[90px]"
+                                    ></div>
+                                    <h1
+                                        class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl"
+                                    >
+                                        Photo Editing
+                                    </h1>
+                                </div>
+                                <p
+                                    class="text-lg leading-8 text-gray-700 dark:text-stone-300 md:px-7 md:text-xl md:leading-10"
+                                >
+                                    As a Photoshop expert, I bring a deep
+                                    understanding of the software’s full
+                                    potential to every project, ensuring
+                                    flawless edits and high-impact visuals.
+                                    Whether it's photo retouching, advanced
+                                    compositing, or creating custom graphics, I
+                                    have the skills to transform your ideas into
+                                    professional, polished results. My attention
+                                    to detail and mastery of Photoshop's
+                                    powerful tools allow me to enhance images,
+                                    correct imperfections, and create stunning
+                                    visuals that resonate with your audience.
+                                    I’m committed to delivering work that meets
+                                    the highest standards, always tailored to
+                                    your unique needs and vision.
+                                </p>
+                            </div>
+
+                            <div
+                                class="card-to--glow relative flex flex-1 flex-col justify-center gap-3 rounded-xl border bg-[#bae6fd] px-4 py-8 before:opacity-50 before:blur-lg dark:bg-blue-950 dark:before:bg-conic-gradient dark:after:bg-conic-gradient md:px-6 md:py-5 lg:mx-auto lg:w-3/4"
+                            >
+                                <div
+                                    class="flex items-center justify-center gap-3 md:flex-col"
+                                >
+                                    <div
+                                        class="h-14 w-14 rounded-full bg-green-700 md:h-[90px] md:w-[90px]"
+                                    ></div>
+                                    <h1
+                                        class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl"
+                                    >
+                                        Programming
+                                    </h1>
+                                </div>
+                                <p
+                                    class="text-lg leading-8 text-gray-700 dark:text-stone-300 md:px-7 md:text-xl md:leading-10"
+                                >
+                                    As a dedicated programmer, I’m passionate
+                                    about writing clean, efficient code that
+                                    brings ideas to life through technology. I
+                                    focus on solving complex problems and
+                                    building robust, scalable solutions that are
+                                    tailored to meet your specific needs. With a
+                                    deep understanding of both front-end and
+                                    back-end development, I ensure that every
+                                    project is not only functional but also
+                                    user-friendly and optimized for performance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="skill" class="h-screen px-2 pt-1">
+                    <div class="flex h-full flex-col md:justify-center">
+                        <header
+                            class="mb-2 flex items-center justify-center pb-7 text-4xl font-extrabold text-gray-800 dark:text-white md:mb-4 md:text-6xl"
+                        >
+                            My Skills
+                        </header>
+
+                        <div>
+                            <div
+                                class="flex h-full flex-col justify-center gap-7"
+                            >
+                                <div>
+                                    <h1
+                                        class="mb-2 text-center text-xl font-semibold dark:text-white"
+                                    >
+                                        Technical Skills
+                                    </h1>
+                                    <div
+                                        class="space-y-5 md:flex md:flex-col md:items-center"
+                                    >
+                                        <div class="md:w-3/4">
+                                            <div
+                                                class="mb-1 flex justify-between"
+                                            >
+                                                <p
+                                                    class="dark:text-white md:text-lg md:font-medium"
+                                                >
+                                                    FIGMA
+                                                </p>
+                                                <p
+                                                    class="percentage dark:text-white md:text-lg md:font-medium"
+                                                    id="figmaP"
+                                                >
+                                                    75%
+                                                </p>
+                                            </div>
+
+                                            <div
+                                                class="h-6 w-full overflow-hidden rounded-full bg-gray-200"
+                                            >
+                                                <div
+                                                    style="
+                                                        --dynamic-width: 100%;
+                                                    "
+                                                    class="duration-400 progressRep h-full w-[63%] rounded-l-full bg-[#62cff4] transition-all"
+                                                    id="figma-progress-rep--Value"
+                                                ></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="md:w-3/4">
+                                            <div
+                                                class="mb-1 flex justify-between"
+                                            >
+                                                <p
+                                                    class="dark:text-white md:text-lg md:font-medium"
+                                                >
+                                                    Graphics Design
+                                                </p>
+                                                <p
+                                                    class="percentage dark:text-white md:text-lg md:font-medium"
+                                                    id="graphicsDp"
+                                                >
+                                                    75%
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="h-6 w-full overflow-hidden rounded-full bg-gray-200"
+                                            >
+                                                <div
+                                                    style="
+                                                        --dynamic-width: 100%;
+                                                    "
+                                                    class="duration-400 progressRep h-full w-[89%] rounded-l-full bg-[#62cff4] transition-all"
+                                                    id="graphics-progress-rep--value"
+                                                ></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="md:w-3/4">
+                                            <div
+                                                class="mb-1 flex justify-between"
+                                            >
+                                                <p
+                                                    class="dark:text-white md:text-lg md:font-medium"
+                                                >
+                                                    Photoshop
+                                                </p>
+                                                <p
+                                                    class="percentage dark:text-white md:text-lg md:font-medium"
+                                                    id="photoP"
+                                                >
+                                                    75%
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="h-6 w-full overflow-hidden rounded-full bg-gray-200"
+                                            >
+                                                <div
+                                                    style="
+                                                        --dynamic-width: 100%;
+                                                    "
+                                                    class="duration-400 progressRep h-full w-[92%] rounded-l-full bg-[#62cff4] transition-all"
+                                                    id="photo-progress-rep--value"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h1
+                                        class="mb-2 text-center text-xl font-semibold dark:text-white"
+                                    >
+                                        Professional Skills
+                                    </h1>
+                                    <div
+                                        class="flex min-h-fit flex-wrap justify-center gap-9 lg:justify-around"
+                                    >
+                                        <div
+                                            class="relative h-[160px] w-[160px]"
+                                        >
+                                            <div
+                                                class="outer flex h-[160px] w-[160px] items-center justify-center rounded-[50%]"
+                                            >
+                                                <div
+                                                    class="inner flex h-[120px] w-[120px] items-center justify-center rounded-[50%]"
+                                                >
+                                                    <div
+                                                        class="circle-label dark:text-white md:text-lg md:font-medium"
+                                                    >
+                                                        65%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                version="1.1"
+                                                width="160px"
+                                                height="160px"
+                                            >
+                                                <defs>
+                                                    <linearGradient
+                                                        id="GradientColor"
+                                                    >
+                                                        <stop
+                                                            offset="0%"
+                                                            stop-color="#62cff4"
+                                                        />
+                                                        <stop
+                                                            offset="100%"
+                                                            stop-color="#2c67f2"
+                                                        />
+                                                    </linearGradient>
+                                                </defs>
+                                                <circle
+                                                    id="c1"
+                                                    cx="80"
+                                                    cy="80"
+                                                    r="70"
+                                                    stroke-linecap="round"
+                                                    style="--dynamic-offset: 0"
+                                                />
+                                            </svg>
+                                            <p
+                                                class="mt-2 text-center dark:text-white md:text-lg md:font-medium"
+                                            >
+                                                Team Work
+                                            </p>
+                                        </div>
+
+                                        <div
+                                            class="relative h-[160px] w-[160px]"
+                                        >
+                                            <div
+                                                class="outer flex h-[160px] w-[160px] items-center justify-center rounded-[50%]"
+                                            >
+                                                <div
+                                                    class="inner flex h-[120px] w-[120px] items-center justify-center rounded-[50%]"
+                                                >
+                                                    <div
+                                                        class="circle-label dark:text-white md:text-lg md:font-medium"
+                                                    >
+                                                        65%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                version="1.1"
+                                                width="160px"
+                                                height="160px"
+                                            >
+                                                <defs>
+                                                    <linearGradient
+                                                        id="GradientColor"
+                                                    >
+                                                        <stop
+                                                            offset="0%"
+                                                            stop-color="#e91e63"
+                                                        />
+                                                        <stop
+                                                            offset="100%"
+                                                            stop-color="#673ab7"
+                                                        />
+                                                    </linearGradient>
+                                                </defs>
+                                                <circle
+                                                    id="c2"
+                                                    cx="80"
+                                                    cy="80"
+                                                    r="70"
+                                                    stroke-linecap="round"
+                                                    style="--dynamic-offset: 0"
+                                                />
+                                            </svg>
+                                            <p
+                                                class="mt-2 text-center dark:text-white md:text-lg md:font-medium"
+                                            >
+                                                Creativity
+                                            </p>
+                                        </div>
+
+                                        <div
+                                            class="relative h-[160px] w-[160px]"
+                                        >
+                                            <div
+                                                class="outer flex h-[160px] w-[160px] items-center justify-center rounded-[50%]"
+                                            >
+                                                <div
+                                                    class="inner flex h-[120px] w-[120px] items-center justify-center rounded-[50%]"
+                                                >
+                                                    <div
+                                                        class="circle-label dark:text-white md:text-lg md:font-medium"
+                                                    >
+                                                        65%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                version="1.1"
+                                                width="160px"
+                                                height="160px"
+                                            >
+                                                <defs>
+                                                    <linearGradient
+                                                        id="GradientColor"
+                                                    >
+                                                        <stop
+                                                            offset="0%"
+                                                            stop-color="#e91e63"
+                                                        />
+                                                        <stop
+                                                            offset="100%"
+                                                            stop-color="#673ab7"
+                                                        />
+                                                    </linearGradient>
+                                                </defs>
+                                                <circle
+                                                    id="c3"
+                                                    cx="80"
+                                                    cy="80"
+                                                    r="70"
+                                                    stroke-linecap="round"
+                                                    style="--dynamic-offset: 0"
+                                                />
+                                            </svg>
+                                            <p
+                                                class="mt-2 text-center dark:text-white md:text-lg md:font-medium"
+                                            >
+                                                Project Management
+                                            </p>
+                                        </div>
+
+                                        <div
+                                            class="relative h-[160px] w-[160px]"
+                                        >
+                                            <div
+                                                class="outer flex h-[160px] w-[160px] items-center justify-center rounded-[50%]"
+                                            >
+                                                <div
+                                                    class="inner flex h-[120px] w-[120px] items-center justify-center rounded-[50%]"
+                                                >
+                                                    <div
+                                                        class="circle-label dark:text-white md:text-lg md:font-medium"
+                                                    >
+                                                        65%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                version="1.1"
+                                                width="160px"
+                                                height="160px"
+                                            >
+                                                <defs>
+                                                    <linearGradient
+                                                        id="GradientColor"
+                                                    >
+                                                        <stop
+                                                            offset="0%"
+                                                            stop-color="#e91e63"
+                                                        />
+                                                        <stop
+                                                            offset="100%"
+                                                            stop-color="#673ab7"
+                                                        />
+                                                    </linearGradient>
+                                                </defs>
+                                                <circle
+                                                    id="c4"
+                                                    cx="80"
+                                                    cy="80"
+                                                    r="70"
+                                                    stroke-linecap="round"
+                                                    style="--dynamic-offset: 0"
+                                                />
+                                            </svg>
+                                            <p
+                                                class="mt-2 text-center dark:text-white md:text-lg md:font-medium"
+                                            >
+                                                Communication
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section
+                    id="contact"
+                    class="max-h-screen w-full px-2 pt-1 md:mx-auto md:mb-5 md:w-3/4 md:pt-10 lg:h-screen lg:pt-20"
+                >
+                    <div class="flex h-full items-center justify-center">
+                        <div class="w-full px-4">
+                            <header
+                                class="flex items-center justify-center pb-7 text-center text-4xl font-extrabold text-gray-800 dark:text-white md:text-6xl"
+                            >
+                                Contact me
+                            </header>
+                            <div class="">
+                                <form class="flex flex-col lg:mx-auto lg:w-1/2">
+                                    <div
+                                        class="flex flex-1 flex-col gap-2 lg:gap-5"
+                                    >
+                                        <input
+                                            type="text"
+                                            id="full-name"
+                                            placeholder="Full Name"
+                                            class="block h-12 rounded-lg border-2 border-gray-500/30 bg-white px-4 py-6 text-lg md:h-[50px] md:rounded-lg md:px-5 md:py-1 md:text-lg"
+                                        />
+
+                                        <!-- <input
+                                            type="email"
+                                            placeholder="Email"
+                                            class="block h-12 rounded-lg border-2 border-gray-500/30 bg-white px-4 py-6 text-lg md:h-[50px] md:rounded-lg md:px-5 md:py-1 md:text-lg"
+                                        /> -->
+                                        <input
+                                            type="tel"
+                                            id="phone-number"
+                                            placeholder="Phone number"
+                                            class="block h-12 rounded-lg border-2 border-gray-500/30 bg-white px-4 py-6 text-lg md:h-[50px] md:rounded-lg md:px-5 md:py-1 md:text-lg"
+                                        />
+                                        <input
+                                            type="text"
+                                            id="subject"
+                                            placeholder="Subject"
+                                            class="block h-12 rounded-lg border-2 border-gray-500/30 bg-white px-4 py-6 text-lg md:h-[50px] md:rounded-lg md:px-5 md:py-1 md:text-lg"
+                                        />
+                                    </div>
+                                    <div class="mt-3 flex flex-col md:flex-col">
+                                        <textarea
+                                            id="message"
+                                            class="h-[100px]overflow-y-scroll rounded-lg border-2 border-gray-500/30 bg-white px-4 py-6 text-lg md:h-[90px] md:rounded-lg md:px-5 md:text-lg"
+                                            placeholder="Your message"
+                                        ></textarea>
+                                        <button
+                                            class="submit-btn mt-6 rounded-lg bg-blue-700 px-7 py-4 text-white shadow-md shadow-slate-200 focus:bg-blue-900 md:px-11 md:py-5 md:text-xl"
+                                        >
+                                            Send Message
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer
+                class="z-30 flex h-[100px] items-center justify-around bg-stone-900"
+            >
+                <p class="text-5xl font-extrabold text-gray-100">JOE ALEX</p>
+
+                <div class="flex gap-4 md:gap-7">
+                    <a
+                        href="http://www.facebook.com"
+                        target="_blank"
+                        role="link"
+                        class="block"
+                        ><img
+                            class="hover:scale-125"
+                            src="./../public/fb.svg"
+                            alt=""
+                    /></a>
+                    <a
+                        href="http://www.linkedin.com"
+                        target="_blank"
+                        role="link"
+                        class="block"
+                        ><img
+                            class="hover:scale-125"
+                            src="./../public/linkedin.svg"
+                            alt=""
+                    /></a>
+                </div>
+            </footer>
+        </section>
+        <script defer src="./index.js"></script>
+    </body>
+</html>
