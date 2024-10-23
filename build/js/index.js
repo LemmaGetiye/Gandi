@@ -13,11 +13,11 @@ document.querySelectorAll('.bar-menu a').forEach((link) =>
         navMenu.classList.remove('active')
     })
 )
+
 document.querySelector('.bar-menu img').addEventListener('click', () => {
     hamburger.classList.remove('active')
     navMenu.classList.remove('active')
 })
-
 const theme = document.querySelectorAll('.theme')
 const icons = document.querySelectorAll('.theme-icon')
 let localStorageTheme = localStorage.getItem('theme')
@@ -28,22 +28,43 @@ if (localStorageTheme) {
     html.classList.add('lg:scrollbar-thin')
     html.classList.add(localStorageTheme)
     document.querySelector('body').style.backgroundColor = '#1e293b'
-    phoneIcon.setAttribute('src', './../public/phone-light.svg')
-    emailIcon.setAttribute('src', './../public/gmail-light.svg')
+    phoneIcon.setAttribute('src', ' ./img/phone-light.svg')
+    emailIcon.setAttribute('src', './img/gmail-light.svg')
 } else {
     html.classList.add('lg:no-scrollbar')
     html.classList.remove('lg:scrollbar-thumb-slate-950')
     html.classList.remove('lg:scrollbar-track-slate-400')
     html.classList.remove('lg:scrollbar-thin')
     document.querySelector('body').style.backgroundColor = '#f0fdfa'
-    phoneIcon.setAttribute('src', './../public/phone.svg')
-    emailIcon.setAttribute('src', './../public/gmail-svgrepo-com.svg')
+
+    phoneIcon.setAttribute('src', './img/phone.svg')
+    emailIcon.setAttribute('src', './img/gmail-svgrepo-com.svg')
 }
+const miniIcon = document.querySelector('#mini-icon')
+const maxIcon = document.querySelector('#max-icon')
+miniIcon.addEventListener('click', () => {
+    if (html.classList.contains('dark')) {
+        miniIcon.setAttribute('src', './img/dark.svg')
+        maxIcon.setAttribute('src', './img/dark.svg')
+    } else {
+        miniIcon.setAttribute('src', './img/light.svg')
+        maxIcon.setAttribute('src', './img/light.svg')
+    }
+})
+maxIcon.addEventListener('click', () => {
+    if (html.classList.contains('dark')) {
+        miniIcon.setAttribute('src', './img/dark.svg')
+        maxIcon.setAttribute('src', './img/dark.svg')
+    } else {
+        miniIcon.setAttribute('src', './img/light.svg')
+        maxIcon.setAttribute('src', './img/light.svg')
+    }
+})
 if (localStorageTheme)
-    icons.forEach((icon) => icon.setAttribute('src', './../public/light.svg'))
+    icons.forEach((icon) => icon.setAttribute('src', './img/light.svg'))
 theme.forEach((Theme) =>
     Theme.addEventListener('click', () => {
-        const img = Array.from(Theme.children).at(0)
+        // const img = Array.from(Theme.children).at(0)
         if (html.classList.contains('dark')) {
             html.classList.remove('lg:scrollbar-thumb-slate-950')
             html.classList.add('lg:no-scrollbar')
@@ -52,9 +73,9 @@ theme.forEach((Theme) =>
 
             document.querySelector('body').style.backgroundColor = '#f0fdfa'
             localStorage.setItem('theme', '')
-            phoneIcon.setAttribute('src', './../public/phone.svg')
-            emailIcon.setAttribute('src', './../public/gmail-svgrepo-com.svg')
-            img.setAttribute('src', './../public/dark.svg')
+            phoneIcon.setAttribute('src', './img/phone.svg')
+            emailIcon.setAttribute('src', './img/gmail-svgrepo-com.svg')
+            // img.setAttribute('src', './img/dark.svg')
         } else {
             html.classList.remove('lg:no-scrollbar')
             html.classList.add('lg:scrollbar-thumb-slate-950')
@@ -63,9 +84,9 @@ theme.forEach((Theme) =>
             localStorage.setItem('theme', 'dark')
             document.querySelector('body').style.backgroundColor = '#1e293b'
 
-            phoneIcon.setAttribute('src', './../public/phone-light.svg')
-            emailIcon.setAttribute('src', './../public/gmail-light.svg')
-            img.setAttribute('src', './../public/light.svg')
+            phoneIcon.setAttribute('src', './img/phone-light.svg')
+            emailIcon.setAttribute('src', './img/gmail-light.svg')
+            // img.setAttribute('src', './img/light.svg')
         }
         html.classList.toggle('dark')
     })

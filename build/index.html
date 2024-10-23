@@ -4,15 +4,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>JOE</title>
-        <link rel="icon" href="./../public/globe.png" type="image/png" />
+        <link rel="icon" href="./img/globe.png" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="./extra.css" />
-        <link rel="stylesheet" href="./output.css" />
+        <link rel="stylesheet" href="./css/extra.css" />
+        <link rel="stylesheet" href="./css/output.css" />
     </head>
     <body class="bg-teal-50 font-['Roboto']">
         <section class="flex min-h-screen flex-col dark:bg-slate-800">
@@ -65,9 +65,10 @@
                         class="theme mb-2 flex cursor-pointer items-center justify-center"
                     >
                         <img
-                            src="./../public/dark.svg"
+                            src="./img/dark.svg"
                             alt=""
                             class="theme-icon"
+                            id="mini-icon"
                         />
                     </li>
                 </ul>
@@ -98,9 +99,10 @@
                     </li>
                     <li class="theme cursor-pointer">
                         <img
-                            src="./../public/dark.svg"
+                            src="./img/dark.svg"
                             alt=""
                             class="theme-icon"
+                            id="max-icon"
                         />
                     </li>
                 </ul>
@@ -161,7 +163,7 @@
 
                                 <div class="flex items-center gap-1 md:gap-3">
                                     <img
-                                        src="./../public/phone.svg"
+                                        src="./img/phone.svg"
                                         class=""
                                         alt=""
                                         id="phone-icon"
@@ -186,7 +188,7 @@
 
                                 <div class="flex items-center gap-1 md:gap-3">
                                     <img
-                                        src="../public/gmail-svgrepo-com.svg"
+                                        src="./img/gmail-svgrepo-com.svg"
                                         alt=""
                                         width="30px"
                                         height="30px"
@@ -734,10 +736,7 @@
                         target="_blank"
                         role="link"
                         class="block"
-                        ><img
-                            class="hover:scale-125"
-                            src="./../public/fb.svg"
-                            alt=""
+                        ><img class="hover:scale-125" src="./img/fb.svg" alt=""
                     /></a>
                     <a
                         href="http://www.linkedin.com"
@@ -746,12 +745,12 @@
                         class="block"
                         ><img
                             class="hover:scale-125"
-                            src="./../public/linkedin.svg"
+                            src="./img/linkedin.svg"
                             alt=""
                     /></a>
                 </div>
             </footer>
         </section>
-        <script defer src="./index.js"></script>
+        <script defer src="./js/index.js"></script>
     </body>
 </html>
